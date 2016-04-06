@@ -31,8 +31,8 @@ puts str
 #bar
 
 #why?
-# after the method change_me(str) ends [line 20] , the method argument of (str) can still be redefined
+# after the method change_me(str) ends [line --] , the method argument of (str) can still be redefined
 # by passing in new method arguement (((by value)))
 
-# On [line 22-23] the "change_me(str)" method is passed a new arg of "bar". The (str) is redefined as
+# On [line ---] the "change_me(str)" method is passed a new arg of "bar". The (str) is redefined as
 # "bar" and is assigned a new place within memory 
