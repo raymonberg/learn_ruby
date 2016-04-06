@@ -29,7 +29,11 @@ end
 
 puts sorted
 
+puts new_unsorted
 
+puts unsorted
+
+puts smallest
 
 
 
