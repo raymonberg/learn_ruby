@@ -36,9 +36,6 @@ puts unsorted
 puts smallest
 
 
-
-
-
 #word.min (starts with "Aaaa")
 # 
 

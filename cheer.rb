@@ -19,11 +19,7 @@ puts ""
 cheer.each {|key, value| puts "#{key}"}
 
 puts ""
-
-thisCheer = gets.chomp.capitalize
-puts cheer[thisCheer]
 #accept user input as variable.
-
-#compare user input to hash values
-
-#output/print appropriate response.
+thisCheer = gets.chomp.capitalize
+#compare user input to hash values and print response.
+puts cheer[thisCheer]
