@@ -5,7 +5,7 @@ def format_ssn(string)
   string.gsub(/\w{2}-\w{4}/, 'XX-XXXX')
 end
 
-ssn = "333-00-9999"
+ssn = "Fred Flinstone, 333-00-9999"
 
 newssn = format_ssn (ssn)
 
