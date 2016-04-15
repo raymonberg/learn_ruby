@@ -9,7 +9,7 @@ odd_array = odd_method (numbers)
 p odd_array
 
 
-		
+
 
 
 
@@ -18,7 +18,7 @@ p odd_array
 # numbers = [10, 17, 20, 37]
 
 # def odd_method (input)
-# 	input.each {|number| 
+# 	input.each {|number|
 # 		if number % 2 == 1
 # 		puts number
 # 		}
