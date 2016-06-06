@@ -1,7 +1,31 @@
-words = ["hi", 0, nil, nil, "inbetweennils", nil, 7, "bye"]
-def clear (arr)
-arr.compact
+words = ["hi", "inbetweennils", "", nil, "bye"]
+
+
+def remove_empty (inputs)
+  inputs.select do |word|
+    if word.class == String
+      word.length >= 1
+    end
+  end
 end
 
-nonil = clear (words)
-puts nonil
+new_list = remove_empty (words)
+puts new_list
+
+
+
+
+
+
+
+
+
+
+
+
+# def clear (arr)
+# arr.compact
+# end
+#
+# nonil = clear (words)
+# puts nonil

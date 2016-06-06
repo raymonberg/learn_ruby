@@ -1,8 +1,8 @@
 
 
 def format_ssn(string)
-  string.scan(/\w{3}-\w{2}-\w{4}/)
-  string.gsub(/\w{2}-\w{4}/, 'XX-XXXX')
+  string.scan(/\d{3}-\d{2}-\d{4}/)
+  string.gsub(/\d{2}-\d{4}/, 'XX-XXXX')
 end
 
 ssn = "Fred Flinstone, 333-00-9999"
