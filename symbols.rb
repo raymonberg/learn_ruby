@@ -31,7 +31,7 @@ puts people [:ray]
 #exercise below 
 
 color_map = {
-    red:  "#FF0000", 
+    red:  "#FF0000", #--->same as :red => "#FF0000",
     blue:  "#0000FF", 
     green: "#00FF00",
     black: "#000000",
