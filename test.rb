@@ -1,50 +1,18 @@
-# # str = "hello : my name is"
-# # str = str.split(":")[0]
-# # puts str [0]
+require 'benchmark'
 
-# def method (var)
-# 	var = var[0].upcase
-# end
-# word = "cake"
-# method (word)
-# puts word
+class Array
+   def mode1
+     group_by { |n| n }.values.max_by(&:size).first
+   end
+   def mode2
+     freq = inject(Hash.new(0)) { |h,v| h[v] += 1; h }
+     max = freq.values.max                   # we're only interested in the key(s) with the highest frequency
+     freq.select { |k, f| f == max }         # extract the keys that have the max frequency
+   end
+end
 
-#__________________________________________
-# def name_this_method(word)
-# 	word[0] = word[0].upcase
-# end
+arr = Array.new(1_0000) { |i| rand(100000) }    # something to test with
 
-# def shout(word)
-# 	word.upcase + "!"
-# end
-# ____________________________________________
-# def name_this_method!(var)
-# 	var = var[0].upcase
-# end
-
-# word = "hurrah"
-# name_this_method! (word)
-# puts word
-# _________________________________________
-# # word="chicken"
-
-# def name_this_method(word)
-# word = word.upcase + "!"
-# puts word
-# end
-
-# name_this_method (word) #word here has no connection to above
-# puts word
-
-# def change_me(str)
-# 	str = "foo"
-# 	puts str 
-# 	str[0] = "b"
-# 	puts str
-# end
-
-# str777 = "far"
-
-# change_me(str777)
-
-# puts str   
+Benchmark.bm(30) do |r|
+    (1..2).each do |i| r.report("mode#{i}") { 1000.times do arr.send("mode#{i}").inspect; end }; end
+end
