@@ -19,3 +19,5 @@ table = [ ["Name", "Number", "Position", "Stats"],
 		puts false
 	end
 
+	puts table[1][0] == "Stephen Curry"
+
