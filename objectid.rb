@@ -1,15 +1,15 @@
-x="foo"
-y=4
-z="foo"+"bar"
-g=x+z
+x = "foo"
+y = 4
+z = "foo" + "bar"
+g = x + z
 
-puts "object id of x: #{x.object_id}" #object id of x in memory
+puts "object id of x: #{x.object_id}" # object id of x in memory
 puts "object id of y: #{y.object_id}"
 puts "object id of z: #{z.object_id}"
 puts "object id of g: #{g.object_id}"
 
 
-#question
+# question
 # ----------------
 # After you add the code that will print out
 # the object id of the variables,
@@ -23,4 +23,4 @@ puts "object id of g: #{g.object_id}"
 # a new instance of each variable. If you wrote a
 # destructive method to replace the the contents of the
 # object, then you would return the same object id
-#________________________________________________
+# ________________________________________________

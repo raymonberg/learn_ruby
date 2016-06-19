@@ -14,7 +14,7 @@ cheer = {
 cheer.default = "hurrah"
 
 #prompt the user to enter (Cheer, Defense, or Win) >>> print out hash key rather than hardcode <<<
-puts "Choose Cheer Title From Below: " 
+puts "Choose Cheer Title From Below: "
 puts ""
 cheer.each {|key, value| puts "#{key}"}
 
