@@ -21,8 +21,9 @@ puts sum_recursive([2,3,4,5])
 
 
 
-#exercise (minus binary search)
 
+
+#exercise (minus binary search)
 
 def fact (n)
 	if n == 1
