@@ -12,22 +12,22 @@ def binary_search(array, x, low=0, high=array.length - 1)
   return  "number not found"
   end
   mid = (low + high) / 2
-  if array[mid]==x #
+  if array[mid]==x #number is found to be [mid] stop search, [mid]=x , x=[mid
     return mid
   end
 
   if array[mid] > x
-    high = mid - 1
-    return binary_search(array, x, low, high) #recursion point
+    high = mid - 1 #entire right side dropped along with [MID]- high search point is the number just before [MID]
+    return binary_search(array, x, low, high) #return to method with new data
   elsif array[mid] < x
-    low = mid + 1
-    return binary_search(array, x, low, high) #recursion point (with new )
+    low = mid + 1 # entire left side dropped along with [MID]- low search point is first number on right
+    return binary_search(array, x, low, high) #return to method with new data
   end
 end
 
-a_list = [1,2,3,5,6,7,9]
+numbers = [1,3,5,6,7,9,10,15,22,29,50,57,60]
 
-puts binary_search(a_list, 4)
+puts binary_search(numbers, 57)
 
 
 
