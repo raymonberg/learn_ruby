@@ -1,148 +1,51 @@
+#WEEK 4 RELEASE 0 -- RECURSION/BINARY SEARCH
+def binary_search(array, x, low = 0, high = array.length - 1)
+    return 'number not found' if low > high
+    mid = (low + high) / 2
+    return mid if x == array[mid]
+
+    if  x < array[mid] #LEFT
+        high = mid - 1 # entire right side dropped along with [MID]- high search point is the number just before [MID]
+        return binary_search(array, x, low, high) # return to method with new data
+    elsif x > array[mid] #RIGHT
+        low = mid + 1 # entire left side dropped along with [MID]- low search point is first number on right
+        return binary_search(array, x, low, high) # return to method with new data
+    end
+end
+
+numbers = [1, 3, 5, 6, 7, 9, 10, 15, 22, 29, 50, 57, 60]
+
+puts binary_search(numbers, 10)
+
+
 # #psuedocode
 # #determine x
 # # find array length
 # #find middle point (called "mid") #if x=mid return true
 # ##if mid > x search left side  of mid (-1)--- #### ---
-#else  mid < x search right side (+1)
+# else  mid < x search right side (+1)
 # # find new middle point
 # #repeat until x is found
 
-def binary_search(array, x, low=0, high=array.length - 1)
-  if low > high
-  return  "number not found"
-  end
-  mid = (low + high) / 2
-  if array[mid]==x #number is found to be [mid] stop search, [mid]=x , x=[mid
-    return mid
-  end
-
-  if array[mid] > x
-    high = mid - 1 #entire right side dropped along with [MID]- high search point is the number just before [MID]
-    return binary_search(array, x, low, high) #return to method with new data
-  elsif array[mid] < x
-    low = mid + 1 # entire left side dropped along with [MID]- low search point is first number on right
-    return binary_search(array, x, low, high) #return to method with new data
-  end
-end
-
-numbers = [1,3,5,6,7,9,10,15,22,29,50,57,60]
-
-puts binary_search(numbers, 57)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# def binary_search(array, value, from=0, to)
-#     if to == nil
-#         to = array.length - 1
-#     end
-#
-#     mid = (from + to) / 2
-#
-#     if value < array[mid]
-#         return binary_search array, value, from, mid - 1
-#     elsif value > array[mid]
-#         return binary_search array, value, mid + 1, to
-#     else
-#         return mid
-#     end
-# end
-#
-# ary = [1,2,3,4,5,6,7,8,9]
-# puts binary_search(ary, 5)
-#
-# # def binary_search(array, value, from, to)
-# #     from = 0
-# #     if to == nil
-# #         to = array.length - 1
-# #     end
-# #
-# #     mid = (from + to) / 2
-# #
-# #     if value < array[mid]
-# #         return binary_search array, value, from, mid - 1
-# #     elsif value > array[mid]
-# #         return binary_search array, value, mid + 1, to
-# #     else
-# #         return mid
-# #     end
-# # end
-# #
-# # ary = [1,2,3,4,5,6,7,8,9]
-# # puts binary_search(ary, 5)
-
-
-###########################################################
-#x is element to find
-#outputs: true/false
-#if x > mid search right
-#else (x<middle) search left
-#
-#
-# def is_in_array (array, x)
-#   from = 0
-#   to = array.length
-#   mid= array.length / 2
-#
-#   if to == nil
-#       to = array.count - 1
+#=========================================================================================================
+# def binary_search(array, x, low=0, high=array.length - 1)
+#   if low > high
+#   return  "number not found"
 #   end
-#
-#
-#   if x < array[mid]
-#     return is_in_array array, x, from, mid -1
-#
-#   elsif x > array[mid]
-#     return is_in_array array, x, mid + 1, to
-#   else
+#   mid = (low + high) / 2
+#   if array[mid]==x #number is found to be [mid] stop search, [mid]=x , x=[mid
 #     return mid
 #   end
+#
+#   if array[mid] > x
+#     high = mid - 1 #entire right side dropped along with [MID]- high search point is the number just before [MID]
+#     return binary_search(array, x, low, high) #return to method with new data
+#   elsif array[mid] < x
+#     low = mid + 1 # entire left side dropped along with [MID]- low search point is first number on right
+#     return binary_search(array, x, low, high) #return to method with new data
+#   end
 # end
 #
-#     arr = [1,2,3,4,5,6,7,8,9]
-#     test = is_in_array(arr, 3)
-#     puts test
+# numbers = [1,3,5,6,7,9,10,15,22,29,50,57,60]
 #
-#
-#
-# #   if array.length == 1
-# #     return array.index (x)
-# #     #compare array.pop with x and if they match return true
-# #   end
-# # end
-# #   mid = array.length / 2
-# #   if array[mid] == x
-# #     return true #not neccessary
-# #   elsif array[mid] < x
-# #     right_half = mid -1
-# #     return is_in_array (x, right_half)
-# #   else
-# #     left_half = mid + 1
-# #     return is_in_array (x, left_half)
-# #   end
-# # end
-#
-# #
+# puts binary_search(numbers, 57)
