@@ -4,8 +4,9 @@ board = [
   ["X", "O", "X"]
 ]
 
-def has_win? (array)
-  if array == (["X","X","X"]) || array == (["O","O","O"])
+def has_win? (array, playerNumber=1)
+  if array == (["X","X","X"]) || array == (["O","O","O"]) && playerNumber == 1
+
     puts "win"
     return true
   else
@@ -15,6 +16,9 @@ def has_win? (array)
 end
 
 has_win? (board[1])
+
+def rows_have_win? (array, playerNumber)
+  if array []
 
 
 
