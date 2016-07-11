@@ -1,10 +1,10 @@
 board = [
-  ["X", "O", "X"],
-  ["X", "X", "X"],
-  ["X", "O", "X"]
+  [" ", " ", " "],
+  [" ", " ", " "],
+  [" ", " ", " "]
 ]
 
-def has_win? (array, playerNumber=1)
+def has_win? (array, playerNumber = 1)
   if array == (["X","X","X"]) || array == (["O","O","O"]) && playerNumber == 1
 
     puts "win"
@@ -15,10 +15,17 @@ def has_win? (array, playerNumber=1)
   end
 end
 
-has_win? (board[1])
+
 
 def rows_have_win? (array, playerNumber)
   if array []
+
+
+def col_have_win? (array, playerNumber)
+
+
+
+  if
 
 
 

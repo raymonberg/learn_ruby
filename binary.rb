@@ -27,6 +27,7 @@ puts binary_search(numbers, 10)
 # # find new middle point
 # #repeat until x is found
 
+
 #=========================================================================================================
 # def binary_search(array, x, low=0, high=array.length - 1)
 #   if low > high
